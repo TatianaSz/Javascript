@@ -8,14 +8,56 @@ background-size: cover;
 }
 #quizz-window{
     background-color:#F4442E;
+    font-family: 'Indie Flower', cursive;
     width:400px;
     height:550px;
     position:relative;
     margin: 3rem auto;
+    color:#020122;
+    text-align:center;
+    font-size:5rem;
 }
 #quiz-question{
+    opacity:0;
     background-color:#020122;
     width:100%;
     min-height:20%;
     color:#F2F3AE;
 }
+#quizz-welcome{
+    animation: .6s ease-out 0s 1 slideInFromTop;
+}
+.quizz-welcome_choose, .quizz-option{
+    font-size:3rem;
+}
+.quizz-option div{
+    animation: .6s ease-out slideInFromLeft;
+    animation-delay:calc(0.3s*(var(--i)));
+    animation-fill-mode:forwards;
+    opacity:0;
+    transition: .3s;
+}
+.quizz-option div:hover{
+    color:#F2F3AE;
+    background-color:#020122;
+}
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-40%);
+      opacity:0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity:1;
+    }
+  }
+  @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-40%);
+        opacity:0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity:1;
+      }
+  }
