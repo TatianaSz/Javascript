@@ -36,6 +36,7 @@ background-size: cover;
     animation-fill-mode:forwards;
     opacity:0;
     transition: .3s;
+    cursor:pointer;
 }
 .quizz-option div:hover{
     color:#F2F3AE;
@@ -60,4 +61,20 @@ background-size: cover;
         transform: translateX(0);
         opacity:1;
       }
+  }
+
+  #timer{
+      display:none;
+      padding:10px;
+  }
+  .timer-sec{
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      background-color:#020122;
+      margin:1rem auto;
+      color:#F2F3AE;
+      font-size:5rem;
+      text-align:center;
+      line-height:200px;
   }
