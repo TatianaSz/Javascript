@@ -83,3 +83,18 @@ background-size: cover;
       cursor:pointer;
       font-size:2rem;
   }
+  button{
+      position:absolute;
+      display:none;
+      outline:none;
+      width:300px;
+      border:none;
+     left:50%;
+     transform:translateX(-50%);
+      top:450px;
+      padding:10px;
+      background-color:#020122;
+      color:#F2F3AE;
+      font-size:3rem;
+      cursor:pointer;
+  }

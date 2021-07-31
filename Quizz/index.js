@@ -1,4 +1,4 @@
-const options = document.getElementsByClassName("quizz-option");
+let options = [...document.getElementsByClassName("option")];
 let i=2;
 let inter;
 let pointCount=0;
@@ -29,6 +29,7 @@ function randomQuestions(array) {
 
 function showAnswers(){
     question.style.opacity="1";
+    document.getElementsByTagName("button")[0].style.display="block";
 question.textContent= htmlQuestions[0].question;
 for(let i = 0; i<4;i++){
    [...answers.children][i].textContent=htmlQuestions[0][i];
@@ -52,5 +53,17 @@ function timerFunc(){
 function countTime(){
 inter = window.setInterval(timerFunc, 1000);}
 
-[...options].forEach(opt=>{opt.addEventListener("click", ()=>{firstPage.style.display="none"; timer.style.display="block"; countTime()})});
+options.forEach(opt=>{opt.addEventListener("click", ()=>{firstPage.style.display="none"; timer.style.display="block"; countTime();
+switch(opt.dataset.type){
+case "html":
+    randomQuestions(htmlQuestions);
+    break;
+case "css":
+    randomQuestions(cssQuestions);
+    break;
+case "js":
+    randomQuestions(jsQuestions);
+    break;
+}
+})});
 
