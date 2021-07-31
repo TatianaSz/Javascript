@@ -83,6 +83,11 @@ background-size: cover;
       cursor:pointer;
       font-size:2rem;
   }
+  .answer:hover{
+    cursor:pointer;
+    background-color:#020122;
+    color:#F2F3AE;
+}
   button{
       position:absolute;
       display:none;
