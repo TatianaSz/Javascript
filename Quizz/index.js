@@ -82,7 +82,7 @@ function nextQuestion(){
    console.log(pointCount)
 z++;
 [...answers.children].forEach(l=>l.style.backgroundColor='#F4442E');
-if(z<2){
+if(z<10){
     showAnswers();
 
 }
