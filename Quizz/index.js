@@ -3,13 +3,26 @@ let i=2;
 let inter;
 let pointCount=0;
 let clickedAnswer=false;
+let z=0;
 const firstPage= document.getElementById("one");
 const timer = document.getElementById("timer");
 const question = document.getElementById("quiz-question");
 const answers = document.getElementById("quiz-answers");
 const btn = document.getElementsByTagName("button")[0];
+
+function resize_to_fit() {
+    let fontSize = window.getComputedStyle(answers).fontSize;
+    answers.style.fontSize = (parseFloat(fontSize) - 1) + 'px';
+    console.log(answers.clientHeight)
+    if(answers.clientHeight >= 300){
+      resize_to_fit();
+    }
+  }
+
+
+let chosenQuestions;
 //quenstions and answers
-const htmlQuestions=[{question:"test question", 0:"answeA", 1:"answerB", 2:"answerC", 3:"answerD", correrct:2}];
+const htmlQuestions=[{question:"What is the best way to apply bold styling to text?", 0:"<strong>", 1:"<bold>", 2:"<b>", 3:"font-weight:bold;", correrct:0},{question:"How do you confirm that a document is written in HTML5?", 0:"The server wraps the webpage in an HTML5 wrapper.", 1:"Use the <!DOCTYPE html> declaration that starts the document.", 2:"The browser receives encoding from the server to display the document with HTML5.", 3:"It is enclosed in a <html> tag.", correrct:1}];
 const cssQuestions=[];
 const jsQuestions=[];
 // ------------------
@@ -32,20 +45,23 @@ function randomQuestions(array) {
 function showAnswers(){
     question.style.opacity="1";
     btn.style.display="block";
-question.textContent= htmlQuestions[0].question;
+question.textContent= chosenQuestions[z].question;
 for(let i = 0; i<4;i++){
-   [...answers.children][i].textContent=htmlQuestions[0][i];
+   [...answers.children][i].textContent=chosenQuestions[z][i];
    [...answers.children][i].addEventListener("click", ()=>{
-    i==htmlQuestions[0].correrct?clickedAnswer=true:null;
+    i==chosenQuestions[z].correrct?clickedAnswer=true:null;
     })
 }
+answers.style.fontSize = 32 + "px";
+resize_to_fit()
 }
 
 function nextQuestion(){
    clickedAnswer==true?pointCount++:null;
-   console.log(clickedAnswer)
    clickedAnswer=false;
-console.log(pointCount)
+console.log(chosenQuestions)
+z++;
+showAnswers()
 }
 
 
@@ -65,13 +81,13 @@ btn.addEventListener("click",nextQuestion)
 options.forEach(opt=>{opt.addEventListener("click", ()=>{firstPage.style.display="none"; timer.style.display="block"; countTime();
 switch(opt.dataset.type){
 case "html":
-    randomQuestions(htmlQuestions);
+    chosenQuestions=randomQuestions(htmlQuestions);
     break;
 case "css":
-    randomQuestions(cssQuestions);
+    chosenQuestions=randomQuestions(cssQuestions);
     break;
 case "js":
-    randomQuestions(jsQuestions);
+    chosenQuestions=randomQuestions(jsQuestions);
     break;
 }
 })});
