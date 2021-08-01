@@ -79,8 +79,13 @@ background-size: cover;
       text-align:center;
       line-height:200px;
   }
+  #quiz-answers{
+     display:none;
+  }
   .answer{
       cursor:pointer;
+      border-bottom: 1px solid #020122;
+      padding:7px;
 
   }
   .answer:hover{
@@ -94,9 +99,8 @@ background-size: cover;
       outline:none;
       width:300px;
       border:none;
-     left:50%;
-     transform:translateX(-50%);
-      top:450px;
+     left:420px;
+      top:300px;
       padding:10px;
       background-color:#020122;
       color:#F2F3AE;

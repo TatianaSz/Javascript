@@ -13,7 +13,6 @@ const btn = document.getElementsByTagName("button")[0];
 function resize_to_fit() {
     let fontSize = window.getComputedStyle(answers).fontSize;
     answers.style.fontSize = (parseFloat(fontSize) - 1) + 'px';
-    console.log(answers.clientHeight)
     if(answers.clientHeight >= 300){
       resize_to_fit();
     }
@@ -44,12 +43,15 @@ function randomQuestions(array) {
 
 function showAnswers(){
     question.style.opacity="1";
+    answers.style.display="block";
     btn.style.display="block";
 question.textContent= chosenQuestions[z].question;
 for(let i = 0; i<4;i++){
    [...answers.children][i].textContent=chosenQuestions[z][i];
-   [...answers.children][i].addEventListener("click", ()=>{
+   [...answers.children][i].addEventListener("click", function(){
     i==chosenQuestions[z].correrct?clickedAnswer=true:null;
+    [...answers.children].forEach(l=>l.style.backgroundColor='#F4442E');
+    this.style.backgroundColor='#cf194b';
     })
 }
 answers.style.fontSize = 32 + "px";
