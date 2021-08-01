@@ -63,7 +63,8 @@ function nextQuestion(){
    clickedAnswer=false;
 console.log(chosenQuestions)
 z++;
-showAnswers()
+showAnswers();
+[...answers.children].forEach(l=>l.style.backgroundColor='#F4442E');
 }
 
 

@@ -20,9 +20,10 @@ background-size: cover;
 #quiz-question{
     opacity:0;
     background-color:#020122;
-    width:100%;
+    padding:10px;
     min-height:20%;
-    font-size:3rem;
+    width:380px;
+    font-size:2.5rem;
     color:#F2F3AE;
 }
 #quizz-welcome{
@@ -90,7 +91,6 @@ background-size: cover;
   }
   .answer:hover{
     cursor:pointer;
-    background-color:#020122;
     color:#F2F3AE;
 }
   button{
