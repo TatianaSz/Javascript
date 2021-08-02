@@ -106,14 +106,73 @@ question:"What is the rem unit based on?",
 3:"The rem unit is relative to the font-size of the p element.",
 correct:1     
 },
-// {
-// question:"",
-// 0:"",
-// 1:"",
-// 2:"",
-// 3:"",
-// correct:     
-// },
+{
+question:"Which of the following is NOT a valid color value?",
+0:"color: #000;",
+1:"color: rgb(0,0,0);",
+2:"color: #000000;",
+3:"color: 000000;",
+correct:3     
+},
+{
+question:`What is the vertical gap between the two elements below?
+<div style="margin-bottom: 2rem;">Div 1</div>
+<div style="margin-top: 2rem;">Div 2</div>`,
+0:"2rem",
+1:"3rem",
+2:"4rem",
+3:"no gap",
+correct:0     
+},
+{
+question:"When using the Flexbox method, what property and value is used to display flex items in a column?",
+0:"flex-flow: column; or flex-direction: column;",
+1:"flex-flow: column;",
+2:"flex-column: auto;",
+3:"flex-direction: column;",
+correct:0     
+},
+{
+question:"What is the difference between display:none and visibility:hidden?",
+0:"None",
+1:"Display:none hides the element from view and removes it from the flow of the document. visibility:hidden will hide the element but maintains the space it occupied.",
+2:"Both will hide the element on the page, but display:none has greater browser support.",
+3:"Display:none hides the elements but maintains the space. Visibility:hidden will hide the element from view and remove it from the normal flow of the document",
+correct:1     
+},
+{
+question:"What selector and property would you use to scale an element to be 50% smaller on hover?",
+0:"element:hover {scale: 0.5;}",
+1:"element:hover {scale: 50%;}",
+2:"element:hover {transform: scale(50%);}",
+3:"element:hover {transform: scale(0.5);}",
+correct:3     
+},
+{
+question:`If the width of the container is 500 pixels, what would the width of the three columns be in this layout?
+{ display: grid; grid-template-columns: 50px 1fr 2fr; }`,
+0:"50px, 200px, 300px",
+1:"50px, 100px, 200px",
+2:"50px, 150px, 300px",
+3:"50px, 50px, 100px",
+correct:2     
+},
+{
+question:"What is the difference between the margin and padding properties?",
+0:"Margin adds space around and inside of an element; padding adds space only inside of an element.",
+1:"Margin adds space around an element; padding adds apace inside of an element.",
+2:"Margin adds a line around an element, padding adds space inside of an element.",
+3:"Margin adds space inside of an element, padding adds space around an elemen",
+correct:1     
+},
+{
+question:"How to add a padding value of 10 pixels on the top and bottom, and 0 pixels on the left and right?",
+0:"padding: 10px 10px 0px 0px;",
+1:"padding: 10px 0px;",
+2:"padding: 10px 0px 5px 5px;",
+3:"padding: 10px 0px 0px 10px;",
+correct:1     
+},
 
 
 ];
