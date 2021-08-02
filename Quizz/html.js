@@ -142,6 +142,46 @@ export const htmlQuestions=[
     3:"<p>Press the Enter key to proceed.</p>",
     correct:1     
     },
+    {
+    question:" Which tag is the root element of an HTML document?",
+    0:"<root>",
+    1:"<html>",
+    2:"<head>",
+    3:"<DOCTYPE html>",
+    correct:1     
+    },
+    {
+    question:"What does this code do? <audio controls src=\"sound.mp3\" type=\"audio/mpeg\">When does this text display?</audio>",
+    0:"The text displays when the browser cannot play the sound.",
+    1:"The text displays over the audio controls, unless CSS is used to position it elsewhere.",
+    2:"The text displays under the audio controls.",
+    3:"The text never displays.",
+    correct:0     
+    },
+    {
+    question:"Which image formats can be displayed by all web browsers?",
+    0:"JPG, GIF, TIF",
+    1:"TIF, BMP, GIF",
+    2:"JPG, TIF, BMP",
+    3:"PNG, GIF, JPG",
+    correct:3     
+    },
+    {
+    question:"How to add style.css file inside head element?",
+    0:"<link style=\"style.css\">",
+    1:"<style src=\"style.css\"></style>",
+    2:"<link rel=\"stylesheet\" href=\"style.css\">",
+    3:"<style link=\"style.css\"",
+    correct:2     
+    },
+    {
+    question:"What is the correct way to describe an empty element?",
+    0:"It display nothing on a website.",
+    1:"It has child content but no closing tag.",
+    2:"It has opening and closing tags but no child content.",
+    3:"It has no child content and no closing tag.",
+    correct:3     
+    },
     // {
     // question:"",
     // 0:"",
