@@ -21,8 +21,15 @@ function resize_to_fit() {
     if(answers.clientHeight >= 300){
       resize_to_fit();
     }
+  
   }
-
+  function resize_to_fit_too() {
+    let questionFontSize = window.getComputedStyle(question).fontSize;
+    question.style.fontSize=(parseFloat(questionFontSize) - 1) + 'px';
+    if(question.clientHeight >250){
+        resize_to_fit_too();
+    }
+  }
 
 let chosenQuestions;
 //quenstions and answers
@@ -60,7 +67,9 @@ for(let i = 0; i<4;i++){
     })
 }
 answers.style.fontSize = 32 + "px";
+question.style.fontSize = 32 + "px";
 resize_to_fit()
+resize_to_fit_too()
 }
 function showResults(){
     question.textContent= "Results:"
