@@ -86,13 +86,69 @@ export const htmlQuestions=[
     3:"<mark>, <span>",
     correct:1    
     },
+    {
+    question:"What is the difference between <input type=\"submit\" value=\"click me\"> and <button type=\"submit\">Click me</button>?",
+    0:"There is no difference. Both will render a button that submits a form.",
+    1:"Both will submit a form. However, the <input> can have content other than text, like an image or nested HTML elements, while the <button> cannot.",
+    2:" Both will submit a form. However, the <button> can have content other than text, like an image or nested HTML elements, while the <input> cannot.",
+    3:"<input type=\"button\"> has been deprecated in HTML5. You should use the <button> tag instead.",
+    correct:2    
+    },
+    {
+    question:"Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+    0:"alt",
+    1:"src",
+    2:"title",
+    3:"alternative",
+    correct:0    
+    },
+    {
+    question:"Which doctype is correct for HTML5?",
+    0:"doctype is not needed in HTML5 anymore",
+    1:"<!DOCTYPE HTML5>",
+    2:`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5.0//EN" "http://www.w3.org/TR/html5/strict.dtd">`,
+    3:"<!DOCTYPE html>",
+    correct:3     
+    },
+    {
+    question:"What is the correct HTML element for playing video files?",
+    0:"<media>",
+    1:"<video>",
+    2:"<movie>",
+    3:"<mp4>",
+    correct:1     
+    },
+    {
+    question:"In HTML, which attribute is used to specify that an input field must be filled out?",
+    0:"formvalidate",
+    1:"placeholder",
+    2:"validate",
+    3:"required",
+    correct:3     
+    },
+    {
+    question:"Which input type defines a slider control?",
+    0:"slider",
+    1:"range",
+    2:"controls",
+    3:"slide",
+    correct:1     
+    },
+    {
+    question:"What is the best semantic way to indicate that text refers to keyboard entry?",
+    0:"<p>Press the <tt>Enter</tt> key to proceed.</p>",
+    1:"<p>Press the <kbd>Enter</kbd> key to proceed.</p>",
+    2:"<p>Press the <samp>Enter</samp> key to proceed.</p>",
+    3:"<p>Press the Enter key to proceed.</p>",
+    correct:1     
+    },
     // {
     // question:"",
     // 0:"",
     // 1:"",
     // 2:"",
     // 3:"",
-    // correct:    
+    // correct:     
     // },
     
 ];
