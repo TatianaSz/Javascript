@@ -44,8 +44,7 @@ export const jsQuestions=[
     'use strict';
     function logThis() {
     this.desc = 'logger';
-    console.log(this);
-    }
+    console.log(this);}
     new logThis();`,
     0:"undefined",
     1:"it will throw an error",
@@ -55,10 +54,8 @@ export const jsQuestions=[
     },
     {
     question:`What would be the result in the console of running this code?
-
     for (var i = 0; i < 5; i++) {
-      console.log(i);
-    }`,
+    console.log(i);}`,
     0:"12345",
     1:"012345",
     2:"01234",
@@ -66,7 +63,7 @@ export const jsQuestions=[
     correct:2     
     },
     {
-    question:`What will be logged to the console?  
+    question:`What will be logged to the console?
     let arr = ['dog', 'cat', 'hen'];
     arr[100] = 'fox';
     console.log(arr.length);`,
@@ -89,7 +86,6 @@ export const jsQuestions=[
     },
     {
     question:`What does the following expression evaluate to?
-
     [] == [];`,
     0:"true",
     1:"undefined",

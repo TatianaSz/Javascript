@@ -23,6 +23,7 @@ background-size: cover;
     padding:10px;
     min-height:20%;
     width:380px;
+    white-space: pre-line;
     color:#F2F3AE;
 }
 #quizz-welcome{
