@@ -25,7 +25,7 @@ nav ul{
 background: -moz-radial-gradient(circle at 100% 50%, rgba(208,251,44,1) 0%, rgba(114,255,27,1) 55%, rgba(147,255,150,1) 92%, rgba(205,235,220,1) 100%);
 background: -webkit-radial-gradient(circle at 100% 50%, rgba(208,251,44,1) 0%, rgba(114,255,27,1) 55%, rgba(147,255,150,1) 92%, rgba(205,235,220,1) 100%);
 background: radial-gradient(circle at 100% 50%, rgba(208,251,44,1) 0%, rgba(114,255,27,1) 55%, rgba(147,255,150,1) 92%, rgba(205,235,220,1) 100%);
-animation: rotate 6s linear infinite ,moveup 12s linear forwards
+animation: rotate 6s linear infinite ,moveup 10s linear forwards
 }
 .drink-image{
     height:550px;
