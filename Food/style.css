@@ -13,9 +13,42 @@ nav ul{
     display:flex;
     flex-direction:row;
 }
+
+.gradient{
+    width:100%;
+    height:100%;
+    border-radius:40%;
+    position:absolute;
+    overflow:hidden;
+    z-index:-1;
+    background: rgb(208,251,44);
+background: -moz-radial-gradient(circle at 100% 50%, rgba(208,251,44,1) 0%, rgba(114,255,27,1) 55%, rgba(147,255,150,1) 92%, rgba(205,235,220,1) 100%);
+background: -webkit-radial-gradient(circle at 100% 50%, rgba(208,251,44,1) 0%, rgba(114,255,27,1) 55%, rgba(147,255,150,1) 92%, rgba(205,235,220,1) 100%);
+background: radial-gradient(circle at 100% 50%, rgba(208,251,44,1) 0%, rgba(114,255,27,1) 55%, rgba(147,255,150,1) 92%, rgba(205,235,220,1) 100%);
+animation: rotate 6s linear infinite ,moveup 12s linear forwards
+}
 .drink-image{
-    min-width:300px;
-    min-height:300px;
+    height:550px;
+    width:550px;
+    display:block;
+    position:relative;
     background-size:contain;
     background-repeat:no-repeat;
+    overflow:hidden;
+}
+@keyframes rotate{
+    0%{
+        transform:rotateZ(0);
+    }
+    100%{
+        transform:rotateZ(360deg);
+    }
+}
+@keyframes moveup{
+    0%{
+        top:110%;
+    }
+    100%{
+        top:32%;
+    }
 }
