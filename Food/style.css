@@ -1,0 +1,21 @@
+body{
+    background-color:#31393C;
+    color:#E0D8DE;
+}
+h1{
+    text-align:center;
+}
+nav ul{
+    display:flex;
+    flex-direction:row;
+}
+.drink-container{
+    display:flex;
+    flex-direction:row;
+}
+.drink-image{
+    min-width:300px;
+    min-height:300px;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
