@@ -4,14 +4,20 @@ body{
 }
 h1{
     text-align:center;
+    font-size:4rem;
 }
 nav ul{
     display:flex;
     flex-direction:row;
 }
+nav ul li{
+    margin:10px;
+    cursor:pointer;
+}
 .drink-container{
     display:flex;
     flex-direction:row;
+    justify-content: space-around;
 }
 
 .gradient{
@@ -51,4 +57,12 @@ animation: rotate 6s linear infinite ,moveup 10s linear forwards
     100%{
         top:32%;
     }
+}
+
+.drink-recipe{
+    background-color:#F3CA40;
+    width:550px;
+    height:550px;
+    border-radius:10px;
+
 }
