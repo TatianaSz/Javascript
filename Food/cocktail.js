@@ -27,7 +27,8 @@ const backstyles = [{
     }];
 
 const drinkImg = document.getElementsByClassName("drink-image")[0];
-
+let descDrinkName= document.getElementsByClassName("drink-name")[0];
+let descDrinkIng=document.getElementsByClassName("drink-ingredients")[0];
 const alc = document.getElementsByClassName("alcohol");
 drinkImg.style.backgroundImage=drinksPic[0];
 let nav = document.getElementById("nav");
@@ -40,20 +41,32 @@ let el = document.getElementsByClassName("gradient")[0];
 
 [...alc].forEach((al,i)=>al.addEventListener("click", function(e){
     e.preventDefault;
+    descDrinkIng.innerHTML="";
+    console.log(al.dataset.id);
     //those three lines of code below are triggering reset of the animation ( ͡ʘ ͜ʖ ͡ʘ) magic!
     el.classList.remove("run-animation");
     void el.offsetWidth;
     el.classList.add("run-animation");
     drinkImg.style.backgroundImage=drinksPic[i];
     setStylesOnElement(backstyles[i],el)
+    getDrink(al.dataset.id);
 }))
 
 async function getDrink(name){
-    const drink = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`+name);
+    const drink = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=`+name);
     const drinkData = await drink.json();
-   
+    const drinkes = drinkData.drinks[0];
+    const drinkName = drinkes.strDrink;
+    const instructions = drinkes.strInstructions;
+    for (let i =1; drinkes['strIngredient'+i]!=null; i++){
+         const ing = document.createElement("div")
+         ing.textContent=drinkes['strIngredient'+i];
+         descDrinkIng.appendChild(ing);
+        console.log(drinkes['strIngredient'+i])
+   }
+    const ingredients = drinkes.strIngredient
+    descDrinkName.textContent=drinkName;
+
     }
-    getDrink("mojito")
-    //strDrink - name of drink
-    //strIngredient1,2,3.... - ingredients
-    //strInstructions - instructions
+   
+ 
