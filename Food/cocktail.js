@@ -25,13 +25,15 @@ const backstyles = [{
     background: "-webkit-radial-gradient(circle at 90% 50%, rgba(168,202,223,1) 0%, rgba(42,157,143,1) 45%, rgba(60,163,154,1) 81%, rgba(97,139,74,1) 100%)",
     background: "radial-gradient(circle at 90% 50%, rgba(168,202,223,1) 0%, rgba(42,157,143,1) 45%, rgba(60,163,154,1) 81%, rgba(97,139,74,1) 100%)",
     }];
+const colors=["#53FF45", "#F991CC","#F3CA40","#48BEFF"];
 
 const drinkImg = document.getElementsByClassName("drink-image")[0];
+let drinkback = document.getElementsByClassName("drink-recipe")[0];
 let descDrinkName= document.getElementsByClassName("drink-name")[0];
 let descDrinkIng=document.getElementsByClassName("drink-ingredients")[0];
+let descDrinkRec = document.getElementsByClassName("drink-rec")[0];
 const alc = document.getElementsByClassName("alcohol");
 drinkImg.style.backgroundImage=drinksPic[0];
-let nav = document.getElementById("nav");
 
 const setStylesOnElement = function(styles, element){
     Object.assign(element.style, styles);
@@ -47,6 +49,7 @@ let el = document.getElementsByClassName("gradient")[0];
     el.classList.remove("run-animation");
     void el.offsetWidth;
     el.classList.add("run-animation");
+    drinkback.style.backgroundColor=colors[i];
     drinkImg.style.backgroundImage=drinksPic[i];
     setStylesOnElement(backstyles[i],el)
     getDrink(al.dataset.id);
@@ -62,11 +65,9 @@ async function getDrink(name){
          const ing = document.createElement("div")
          ing.textContent=drinkes['strIngredient'+i];
          descDrinkIng.appendChild(ing);
-        console.log(drinkes['strIngredient'+i])
    }
-    const ingredients = drinkes.strIngredient
     descDrinkName.textContent=drinkName;
-
+    descDrinkRec.textContent=instructions;
     }
    
  
