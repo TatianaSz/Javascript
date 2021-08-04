@@ -36,15 +36,22 @@ const setStylesOnElement = function(styles, element){
     Object.assign(element.style, styles);
 };
 
-[...alc].forEach((al,i)=>al.addEventListener("click", function(){
+let el = document.getElementsByClassName("gradient")[0];
+
+[...alc].forEach((al,i)=>al.addEventListener("click", function(e){
+    e.preventDefault;
+    //those three lines of code below are triggering reset of the animation ( ͡ʘ ͜ʖ ͡ʘ) magic!
+    el.classList.remove("run-animation");
+    void el.offsetWidth;
+    el.classList.add("run-animation");
     drinkImg.style.backgroundImage=drinksPic[i];
-    setStylesOnElement(backstyles[i],document.getElementsByClassName("gradient")[0])
+    setStylesOnElement(backstyles[i],el)
 }))
 
 async function getDrink(name){
     const drink = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`+name);
     const drinkData = await drink.json();
-    console.log(drinkData)
+   
     }
     getDrink("mojito")
     //strDrink - name of drink
