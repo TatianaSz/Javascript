@@ -36,6 +36,7 @@ let descDrinkName= document.getElementsByClassName("drink-name")[0];
 let descDrinkIng=document.getElementsByClassName("drink-ingredients")[0];
 let descDrinkRec = document.getElementsByClassName("drink-rec")[0];
 const alc = document.getElementsByClassName("alcohol");
+
 drinkImg.style.backgroundImage=drinksPic[0];
 
 const setStylesOnElement = function(styles, element){
@@ -44,8 +45,11 @@ const setStylesOnElement = function(styles, element){
 
 let el = document.getElementsByClassName("gradient")[0];
 
-[...alc].forEach((al,i)=>al.addEventListener("click", function(e){
+
+
+[...alc].forEach((al,i)=>{al.addEventListener("click", function(e){
     e.preventDefault;
+    setStylesOnElement({boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"},drinkback);
     descDrinkIng.innerHTML="";
     var bgImg = new Image();
     bgImg.onload = function(){
@@ -58,13 +62,10 @@ let el = document.getElementsByClassName("gradient")[0];
         setStylesOnElement(backstyles[i],el);
     };
     bgImg.src = drinksPic[i];
-
-   
     drinkback.style.backgroundColor=colors[i];
-    
-    
     getDrink(al.dataset.id);
-}))
+})}
+)
 
 async function getDrink(name){
     const drink = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=`+name);
