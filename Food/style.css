@@ -56,10 +56,19 @@ nav ul li{
 }
 @keyframes moveup{
     0%{
-        top:110%;
+        top:100%;
     }
     100%{
         top:32%;
+    }
+}
+
+@keyframes moveupp{
+    0%{
+        top:75%;
+    }
+    100%{
+        top:30%;
     }
 }
 
@@ -69,6 +78,7 @@ nav ul li{
     height:550px;
     border-radius:10px;
     font-size:1.5rem;
+    color:#31393C;
 }
 .drink-name{
 margin:10px;
